@@ -24,38 +24,32 @@ function go1(){
             var last = JSON.parse(this.response).data[x].last_name
             var avatar = JSON.parse(this.response).data[x].avatar
             
-        for(var i=0; i<2; i++){
             var row = document.createElement("tr")
-            for(var j=0; j<20; j++){
-                var col1 = document.createElement("td")
-                col1.append(id)
-                var col2 = document.createElement("td")
-                col2.append(email)
-                var col3 = document.createElement("td")
-                col3.append(first)
-                var col4 = document.createElement("td")
-                col4.append(last)
-                var col5 = document.createElement("td")
-                var image = document.createElement("img")
-                image.src=avatar
-                col5.append(image)
+
+            var col1 = document.createElement("td")
+            col1.innerHTML=id
+            var col2 = document.createElement("td")
+            col2.innerHTML=email
+            var col3 = document.createElement("td")
+            col3.innerHTML=first
+            var col4 = document.createElement("td")
+            col4.innerHTML=last
+            var col5 = document.createElement("td")
+            var image = document.createElement("img")
+            image.src=avatar
+            col5.append(image) 
                 
-            }
-            row.append(col1)
-            row.append(col2)
-            row.append(col3)
-            row.append(col4)
-            row.append(col5)
+            row.append(col1,col2,col3,col4,col5)
+            table.append(row)
         }
-        console.log(JSON.parse(this.response).data[0].avatar)
-        table.append(row)
+        
         document.getElementById("table").append(row)
-        }
-    
     }
     
+}
     
     
-    }
+    
+    
     
     
