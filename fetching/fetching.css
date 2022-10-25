@@ -1,0 +1,8 @@
+body{
+    
+    background-color:aliceblue
+}
+table,td,tr,th{
+    border: 2px solid;
+    border-collapse: collapse;
+}
