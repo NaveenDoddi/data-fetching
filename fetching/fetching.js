@@ -43,7 +43,6 @@ function go1(){
             table.append(row)
         }
         
-        document.getElementById("table").append(row)
     }
     
 }
